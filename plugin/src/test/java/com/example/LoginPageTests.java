@@ -51,14 +51,14 @@ public class LoginPageTests extends BaseTests{
 
     }
 
-    @Test @Disabled
+    @Test
     public void missingPassword() {
 
         LoginPage objLoginPage = new LoginPage(driver);
         objLoginPage.login("admin", "");
 
         // Verify Error Message
-        assertEquals("Invalid credentials",objLoginPage.getMissingPasswordText());
+        assertEquals("Required",objLoginPage.getMissingPasswordText());
 
     }
 
